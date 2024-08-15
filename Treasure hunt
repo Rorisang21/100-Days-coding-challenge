@@ -1,0 +1,79 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+# Initial choice: left or right turn
+turn1 = input("You are in the Amazon forest. We have a left turn and also a right turn. One of them leads to a hole.\nType 'left' to turn left and type 'right' to turn right.\n").lower()
+if turn1 == 'left':
+    # If the player chooses left
+    print("Well, you made quite the right decision. Unfortunately, we have not found the treasure yet.")
+    
+    # Nested choice: wait or swim
+    lake_view = input("You are now facing the lake. You can either swim across or wait a little bit more.\nType 'wait' to wait and type 'swim' to swim across the lake.\n").lower()
+    if lake_view == 'wait':
+        # If the player chooses to wait
+        print("Well, you chose to wait. You know what they say about patience. Good for you because you now have to make the final choice.")
+        
+        # Final choice: choose a door
+        treasure_door = input("One of the choices has your treasure box.\nThere are three doors in front of you. One is a blue door, the other is a yellow door, and the other is a red door.\nType out any of these colors and good luck.\n").lower()
+        if treasure_door == "yellow":
+            # If the player chooses the yellow door
+            print('You win! Well, wanna try again?')
+        elif treasure_door == "blue":
+            # If the player chooses the blue door
+            print("Eaten by the beasts, you were great lunch though.")
+        elif treasure_door == "red":
+            # If the player chooses the red door
+            print("Well, you got burned. At least you're a nice toast.")
+        else:
+            # If the player enters an invalid choice
+            print("Invalid choice. Game over.")
+    else:
+        # If the player chooses to swim
+        print("Well, you're in the Amazon. Why would you swim? Game over!!")
+else:
+    # If the player chooses right
+    print('Your choice was a bit off. Try again.')
