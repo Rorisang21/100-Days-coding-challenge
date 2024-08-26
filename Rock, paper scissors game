@@ -1,0 +1,54 @@
+import random
+
+rock = """
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+
+paper = """
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+Scissors = """
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+press_play = int(input("Please pick between rock (enter 0), paper(enter 1), or scissor(enter 2) \n").lower())
+
+computerschoice = random.randint(0,2)
+
+print(computerschoice)
+
+if computerschoice == 2 and  press_play == 1:
+    print(f"You loose, you chose {paper} and the computers choie is {Scissors}")
+
+elif computerschoice == 0 and press_play == 1:
+    print(f"You Win, you chose {paper} and the computers choice is {rock}")
+
+elif computerschoice == 0 and press_play == 2:
+    print(f"You loose, you chose{Scissors} and the computers choice is {rock}")
+
+elif computerschoice == 1 and press_play == 0:
+    print(f'You loose, you chose {rock} and the computers choice is {paper}')
+
+elif computerschoice == 1 and press_play == 2:
+    print(f'You win, you chose {Scissors} and the computers choice is {rock}')
+
+elif computerschoice == 2 and press_play == 0:
+    print(f"You win, you chose {rock} and the computers choice is {Scissors}")
+
+else:
+    print("Its a tie")
