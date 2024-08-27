@@ -50,5 +50,9 @@ elif computerschoice == 1 and press_play == 2:
 elif computerschoice == 2 and press_play == 0:
     print(f"You win, you chose {rock} and the computers choice is {Scissors}")
 
+elif computerschoice == press_play:
+    print("its a tie")
+
+
 else:
-    print("Its a tie")
+    print("That is not one of the selected numbers, please press play and select one of the numbers presented to you")
